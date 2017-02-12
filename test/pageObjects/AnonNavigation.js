@@ -1,29 +1,22 @@
 const SignInPage = require('./SignInPage');
-const InvoicesPage = require('./InvoicesPage');
-const ClientsPage = require('./ClientsPage');
-const InvoicePage = require('./InvoicePage');
 
-class BasicNavigation {
+class AnonNavigation {
     static navigateToSignIn() {
-        let signInPage = new SignInPage();
-        signInPage.navigate();
-        return signInPage;
+        browser.url('/users/sign_in');
+        return new SignInPage();
     }
     static navigateToInvoices() {
-        let invoicesPage = new InvoicesPage();
-        invoicesPage.navigate();
-        return invoicesPage;
+        browser.url('/invoices');
+        return new SignInPage();
     }
     static navigateToClients() {
-        let page = new ClientsPage();
-        page.navigate();
-        return page;
+        browser.url('/clients');
+        return new SignInPage();
     }
     static navigateToInvoice(id) {
-        let page = new InvoicePage();
-        page.navigate(id);
-        return page;
+        browser.url('/invoices/' + id);
+        return new SignInPage();
     }
 }
 
-module.exports = BasicNavigation;
+module.exports = AnonNavigation;

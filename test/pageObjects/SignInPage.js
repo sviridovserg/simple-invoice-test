@@ -2,8 +2,8 @@ const BasePage = require('./BasePage');
 const InvoicesPage = require('./InvoicesPage');
 
 class SignInPage extends BasePage {
-    navigate() {
-        browser.url('/users/sign_in');
+    getHeaderText() {
+        return browser.element('.container h2').getText();
     }
     sginIn(login, password) {
         browser.element('.container #user_email').setValue(login);

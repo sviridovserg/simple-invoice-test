@@ -1,7 +1,7 @@
 const BasePage = require('./BasePage');
 class InvoicesPage extends BasePage {
-    navigate() {
-        browser.url('/invoices');
+    getHeaderText() {
+        return browser.element('.container h1').getText();
     }
 }
 

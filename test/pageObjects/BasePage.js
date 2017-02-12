@@ -1,6 +1,6 @@
 class BasePage {
     getHeaderText() {
-        return browser.element('.container h2').getText();
+        return browser.element('.container h1').getText();
     }
 }
 
