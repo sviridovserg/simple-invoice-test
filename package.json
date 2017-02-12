@@ -30,19 +30,14 @@
     "webdriverio",
     "mocha",
     "chai",
-    "sinon",
-    "test boilerplate"
+    "sinon"
   ],
   "scripts": {
-    "postinstall": "npm install -g selenium-standalone",
+    "postinstall": "npm install -g selenium-standalone & selenium-standalone install",
     "kill-selenium": "kill -15 $( lsof -i:4444 -t )",
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "help": "./node_modules/.bin/wdio --help"
+    "help": "./node_modules/.bin/wdio --help",
+    "selenium": "selenium-standalone start"
   },
-  "author": "Michael Guild <michaelguild13@gmail.com> <mg@threde.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michaelguild13/Selenium-WebdriverIO-Mocha-Chai-Sinon-Boilerplate.git/issues"
-  },
-  "homepage": "https://github.com/michaelguild13/Selenium-WebdriverIO-Mocha-Chai-Sinon-Boilerplate.git#README"
+  "license": "ISC"
 }
